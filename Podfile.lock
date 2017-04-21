@@ -1,0 +1,120 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Alamofire (4.4.0)
+  - AWSCore (2.5.4)
+  - AWSS3 (2.5.4):
+    - AWSCore (= 2.5.4)
+  - BaiduMapKit (3.2.1)
+  - Bolts-Swift (1.3.0)
+  - Cosmos (8.0.2)
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - DateTools (2.0.0)
+  - EGOCache (2.1.3)
+  - Fabric (1.6.11)
+  - FSImageViewer (3.4):
+    - AFNetworking (~> 2.5)
+    - EGOCache (~> 2.1)
+    - UAProgressView (~> 0.1)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - Mixpanel (3.1.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/Swift (5.2.3):
+    - OHHTTPStubs/Core
+  - PagingMenuController (2.2.0)
+  - pop (1.0.9)
+  - PubNub (4.5.15):
+    - PubNub/Core (= 4.5.15)
+  - PubNub/Core (4.5.15)
+  - Realm (2.4.4):
+    - Realm/Headers (= 2.4.4)
+  - Realm/Headers (2.4.4)
+  - RealmSwift (2.4.4):
+    - Realm (= 2.4.4)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SwiftyAttributes (3.1.0)
+  - SwiftyJSON (3.1.4)
+  - UAProgressView (0.1.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4.0)
+  - AWSS3 (~> 2.5.2)
+  - BaiduMapKit (~> 3.2.1)
+  - Bolts-Swift (~> 1.3.0)
+  - Cosmos (~> 8.0.2)
+  - Crashlytics (~> 3.8.4)
+  - DateTools (~> 2.0.0)
+  - Fabric (~> 1.6.11)
+  - FSImageViewer (~> 3.4)
+  - GoogleMaps (~> 2.2.0)
+  - Mixpanel (~> 3.1.2)
+  - OHHTTPStubs/JSON (~> 5.2.3)
+  - OHHTTPStubs/NSURLSession (~> 5.2.3)
+  - OHHTTPStubs/Swift (~> 5.2.3)
+  - PagingMenuController (~> 2.2.0)
+  - pop (~> 1.0.9)
+  - PubNub (~> 4.5.15)
+  - RealmSwift (~> 2.4.4)
+  - SDWebImage (~> 3.8.2)
+  - SwiftyAttributes (~> 3.1.0)
+  - SwiftyJSON (~> 3.1.4)
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AWSCore: a59914ea554fe04fae612108e717ec64b53b6a2c
+  AWSS3: 6e524b3a2f6bb20a44d3afe086f9f6aba9fcb6d0
+  BaiduMapKit: 9c748785aa3dddfc41dcb70c14b21ce32f680930
+  Bolts-Swift: fa98d1b59fc1acea9b21a21306dcdca1c85e3737
+  Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
+  EGOCache: f0295dbe041156acabd39021354ad1045ee49e72
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  FSImageViewer: 0dea92069cce74a800b75cb8777c923f2be59124
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  Mixpanel: 232acf98cecd94fbb58630ff8512a54ff8d99373
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
+  PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  PubNub: 5080a9cb739435e1efe0b47a00fd45d1188b5150
+  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
+  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SwiftyAttributes: f337a324cd21f1b18782ab85d3478ccae73f7593
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UAProgressView: ce49aee47c14df6dc372f6fd57852f570ca97e6b
+
+PODFILE CHECKSUM: 851be7ebd7a37d22e5b3d6318a598b4482fdf77e
+
+COCOAPODS: 1.2.1
