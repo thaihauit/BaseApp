@@ -2,6 +2,8 @@
  Const.swift
  created by D.ace on 21/04/2017
  */
+import CoreGraphics
+import UIKit
 
 class Const: NSObject {
 

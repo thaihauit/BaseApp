@@ -20,11 +20,11 @@ class DatabaseMaster {
         config.schemaVersion = DatabaseMaster.databaseVersion
         config.migrationBlock = { (migration, oldSchemaVersion) in
             // Database migration
-            DispatchQueue.main.async(execute: {
-                if UserUseCase.getCurrentUser() == nil {
-                    CacheManager.cleanUpCachedFiles()
-                }
-            })
+//            DispatchQueue.main.async(execute: {
+//                if UserUseCase.getCurrentUser() == nil {
+//                    CacheManager.cleanUpCachedFiles()
+//                }
+//            })
         }
         config.deleteRealmIfMigrationNeeded = DatabaseMaster.deleteDatabaseIfMigrationNeeded
         Realm.Configuration.defaultConfiguration = config
