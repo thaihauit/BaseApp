@@ -1,10 +1,4 @@
-//
-//  BaseRestApi.swift
-//  gear
-//
-//  Created by Anh Nguyen on 3/17/16.
-//  Copyright © 2016 BuzzElement. All rights reserved.
-//
+
 
 import Foundation
 import RealmSwift
@@ -12,8 +6,8 @@ import BoltsSwift
 
 class BaseRestApi: NSObject {
 
-    let default_version = "v1"
-    let apiPrefix = "/api"
+    let default_version = ""
+    let apiPrefix = ""
     
     func callInBackgroundWithRequest<T: Parsable>(_ apiRequest: ApiRequest, parser: T?) -> BoltsSwift.Task<Any> {
         if parser != nil {
@@ -69,11 +63,8 @@ class BaseRestApi: NSObject {
     }
     
     func getPath(apiSuffix: String, apiVersion: String? = nil) -> String {
-        if let version = apiVersion {
-            return "\(apiPrefix)/\(version)/\(apiSuffix)"
-        } else {
-            return "\(apiPrefix)/\(default_version)/\(apiSuffix)"
-        }
+        
+            return "\(apiSuffix)"
     }
     
 }

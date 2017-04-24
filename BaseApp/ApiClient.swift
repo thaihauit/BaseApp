@@ -1,16 +1,9 @@
-//
-//  ApiClient.swift
-//  Grabit
-//
-//  Created by yosuke on 12/10/14.
-//  Copyright (c) 2014 BuzzElement. All rights reserved.
-//
+
 
 import Alamofire
 import BoltsSwift
 
 class ApiClient: NSObject {
-
     static let sharedInstance = ApiClient()
     
     func callInBackground(_ request: ApiRequest) -> BoltsSwift.Task<Any> {
@@ -53,20 +46,8 @@ class ApiClient: NSObject {
             let statusCode = parseIntFrom(value[""], defaultValue: response.response!.statusCode)
             let message = parseStringFrom(value[""], defaultValue: "")
             let point = parseIntFrom(value[""], defaultValue: 0)
-//            if let configDict = parseDictFrom(value["config"]) {
-//                _ = ServerConfigModelParser.sharedInstance.parseInBackground(configDict, apiResponse: nil)
-//            }
-            if let modelArray = parseDictArrayFrom(value["data"]) {
-                return ApiResponse(result: modelArray, headers: response.response!.allHeaderFields, statusCode: statusCode, message: message, point: point)
-            } else {
-                var result: Any?
-                if let modelData = self.parseDictFrom(value["data"]) {
-                    result = modelData
-                } else {
-                    result = value
-                }
-                return ApiResponse(result: result, headers: response.response!.allHeaderFields, statusCode: statusCode, message: message, point: point)
-            }
+            return ApiResponse(result: value, headers: response.response!.allHeaderFields, statusCode: statusCode, message: message, point: point)
+            
         } else if let value = response.result.value as? [Dictionary<String, AnyObject>] {
             return ApiResponse(result: value, headers: response.response!.allHeaderFields, statusCode: response.response!.statusCode)
         } else {
@@ -113,18 +94,4 @@ class ApiClient: NSObject {
         }
     }
     
-    // MARK:- Check Response Valid
-//    func checkResponse(_ response: DataResponse<Any>) {
-//        // Check api token
-//        if let value = response.result.value {
-//            if let data = value as? Dictionary<String, AnyObject> {
-//                if UserUseCase.checkIfInvalidApiToken(data) {
-//                    // The api token is invalid now, need to logout for "Single Login"
-//                    NotificationManager.sharedInstance.showNotificationForUserLogout()
-//                    UserUseCase.logoutWhenSessionExpired()
-//                }
-//            }
-//        }
-//    }
-
 }
