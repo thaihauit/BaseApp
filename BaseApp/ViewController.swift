@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import BoltsSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        testapi.sharedInstance.testURL().continueWith(continuation: { (task: BoltsSwift.Task<Any>) -> Any? in
+            
+            if task.faulted {
+                return nil
+            }
+            let apiResponse = task.result as! ApiResponse
+            let locationList = apiResponse.modelData as! test
+            print(locationList.Result)
+            return nil
+        })
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
