@@ -47,9 +47,6 @@ class ApiRequest: URLRequestConvertible {
         if let language = Bundle.main.preferredLocalizations.first {
             _ = request.allHTTPHeaderFields?.updateValue(language[0...1], forKey: "Accept-Language")
         }
-//        if let apiToken = UserUseCase.getCurrentUser()?.api_token {
-//            _ = request.allHTTPHeaderFields?.updateValue(apiToken, forKey: "Api-Token")
-//        }
         return try Alamofire.URLEncoding().encode(request, with: params)
     }
     

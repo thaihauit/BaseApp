@@ -20,6 +20,10 @@
 		0A022DFF1EA9B831006043FA /* DatabaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A022DFB1EA9B831006043FA /* DatabaseSession.swift */; };
 		0A022E061EA9BF8B006043FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A022E051EA9BF8B006043FA /* User.swift */; };
 		0A022E081EA9C08D006043FA /* DatabaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A022E071EA9C08D006043FA /* DatabaseUseCase.swift */; };
+		0A63D0041EADB7FA00C7DEDE /* testapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A63D0031EADB7FA00C7DEDE /* testapi.swift */; };
+		0A63D0071EADDB0400C7DEDE /* BaseResponseObjectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A63D0061EADDB0400C7DEDE /* BaseResponseObjectParser.swift */; };
+		0A63D0091EADDB2D00C7DEDE /* testParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A63D0081EADDB2D00C7DEDE /* testParser.swift */; };
+		0A63D00C1EADDB7400C7DEDE /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A63D00B1EADDB7400C7DEDE /* test.swift */; };
 		0AFD8B4A1EA9C43B0038DA28 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD8B491EA9C43B0038DA28 /* CoreData.framework */; };
 		0AFD8B4C1EA9C4440038DA28 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD8B4B1EA9C4440038DA28 /* Security.framework */; };
 		0AFD8B4E1EA9C44F0038DA28 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD8B4D1EA9C44F0038DA28 /* SystemConfiguration.framework */; };
@@ -89,6 +93,10 @@
 		0A022DFB1EA9B831006043FA /* DatabaseSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseSession.swift; sourceTree = "<group>"; };
 		0A022E051EA9BF8B006043FA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0A022E071EA9C08D006043FA /* DatabaseUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUseCase.swift; sourceTree = "<group>"; };
+		0A63D0031EADB7FA00C7DEDE /* testapi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testapi.swift; sourceTree = "<group>"; };
+		0A63D0061EADDB0400C7DEDE /* BaseResponseObjectParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponseObjectParser.swift; sourceTree = "<group>"; };
+		0A63D0081EADDB2D00C7DEDE /* testParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testParser.swift; sourceTree = "<group>"; };
+		0A63D00B1EADDB7400C7DEDE /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		0AFD8B491EA9C43B0038DA28 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0AFD8B4B1EA9C4440038DA28 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0AFD8B4D1EA9C44F0038DA28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -206,8 +214,10 @@
 		0A022DF01EA9B64B006043FA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0A63D00A1EADDB5100C7DEDE /* ResponseObject */,
 				0AFD8B711EA9DD080038DA28 /* RestApi */,
 				0A022DF11EA9B653006043FA /* Api */,
+				0A63D0051EADD9FC00C7DEDE /* Parser */,
 				0A022DF61EA9B773006043FA /* Util */,
 				0A022DF51EA9B76C006043FA /* UI */,
 				0A022DF41EA9B731006043FA /* UserCase */,
@@ -329,12 +339,30 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		0A63D0051EADD9FC00C7DEDE /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				0A63D0061EADDB0400C7DEDE /* BaseResponseObjectParser.swift */,
+				0A63D0081EADDB2D00C7DEDE /* testParser.swift */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		0A63D00A1EADDB5100C7DEDE /* ResponseObject */ = {
+			isa = PBXGroup;
+			children = (
+				0A63D00B1EADDB7400C7DEDE /* test.swift */,
+			);
+			name = ResponseObject;
+			sourceTree = "<group>";
+		};
 		0AFD8B711EA9DD080038DA28 /* RestApi */ = {
 			isa = PBXGroup;
 			children = (
 				0AFD8B761EA9DD830038DA28 /* Parsable.swift */,
 				0AFD8B721EA9DD220038DA28 /* BaseRestApi.swift */,
 				0AFD8B731EA9DD220038DA28 /* ImageRestApi.swift */,
+				0A63D0031EADB7FA00C7DEDE /* testapi.swift */,
 			);
 			name = RestApi;
 			sourceTree = "<group>";
@@ -559,21 +587,25 @@
 			files = (
 				0AFD8B701EA9DC9F0038DA28 /* ResourceProvider.swift in Sources */,
 				0AFD8B6E1EA9DC9F0038DA28 /* NetworkUtil.swift in Sources */,
+				0A63D0041EADB7FA00C7DEDE /* testapi.swift in Sources */,
 				0A022DFD1EA9B831006043FA /* DatabaseMaster.swift in Sources */,
 				0AFD8B541EA9C5270038DA28 /* Extensions.swift in Sources */,
 				0AFD8B7D1EA9DF2E0038DA28 /* NetworkIssueInfo.swift in Sources */,
 				0AFD8B7C1EA9DF2E0038DA28 /* AppSessionInfo.swift in Sources */,
 				0A022DC21EA9AC9C006043FA /* ViewController.swift in Sources */,
+				0A63D0091EADDB2D00C7DEDE /* testParser.swift in Sources */,
 				0AFD8B771EA9DD830038DA28 /* Parsable.swift in Sources */,
 				0AFD8B821EA9DFCD0038DA28 /* EnumComparable.swift in Sources */,
 				0A022DC01EA9AC9C006043FA /* AppDelegate.swift in Sources */,
 				0AFD8B811EA9DFCD0038DA28 /* AnalyticsType.swift in Sources */,
+				0A63D00C1EADDB7400C7DEDE /* test.swift in Sources */,
 				0A022DFE1EA9B831006043FA /* DatabaseQuery.swift in Sources */,
 				0AFD8B5A1EA9C6750038DA28 /* Navigator.swift in Sources */,
 				0AFD8B741EA9DD220038DA28 /* BaseRestApi.swift in Sources */,
 				0AFD8B6A1EA9DC740038DA28 /* AppAnalyticsManager.swift in Sources */,
 				0AFD8B5C1EA9C6750038DA28 /* NotificationManager.swift in Sources */,
 				0AFD8B641EA9DC0B0038DA28 /* ApiClient.swift in Sources */,
+				0A63D0071EADDB0400C7DEDE /* BaseResponseObjectParser.swift in Sources */,
 				0AFD8B651EA9DC0B0038DA28 /* ApiError.swift in Sources */,
 				0AFD8B841EA9E0190038DA28 /* AppConfig.swift in Sources */,
 				0AFD8B7B1EA9DF2E0038DA28 /* AnalyticsInfo.swift in Sources */,
